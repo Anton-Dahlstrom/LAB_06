@@ -8,13 +8,13 @@ namespace LAB_06
 {
     internal class Snake : Animal 
     {
-        private bool Venomous;
+        private readonly bool _venomous;
         public Snake(string species = "snake", int limbs = 0, 
                     float height = 30, float weight = 0.5f, 
                     int age = 2, int heartRate = 55, bool venomous = false)
         : base(species, limbs, height, weight, age, heartRate)
         {
-            Venomous = venomous; 
+            _venomous = venomous; 
         }
         public override void MakeSound()
         {
@@ -22,7 +22,7 @@ namespace LAB_06
         }
         public void Bite()
         {
-            string danger = (Venomous) ? "venomous " : "";
+            string danger = (_venomous) ? "venomous " : "";
             Console.WriteLine($"The snake delivers a {danger}bite");
         }
     }

@@ -8,13 +8,13 @@ namespace LAB_06
 {
     internal class Cat : Animal 
     {
-        private bool Feral;
+        private bool _feral;
         public Cat(string species = "cat", int limbs = 4, 
                     float height = 20, float weight = 5, 
                     int age = 5, int heartRate = 90, bool feral = false)
         : base(species, limbs, height, weight, age, heartRate)
         {
-            Feral = feral; 
+            _feral = feral; 
         }
         public override void MakeSound()
         {

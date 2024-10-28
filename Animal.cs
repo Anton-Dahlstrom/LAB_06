@@ -8,12 +8,12 @@ namespace LAB_06
 {
     internal class Animal
     {
-        private string _species;
-        private int _limbs;
-        private float _height;
-        private float _weight;
-        private int _age;
-        private int _heartRate;
+        private readonly string _species;
+        private readonly int _limbs;
+        private readonly float _height;
+        private readonly float _weight;
+        private readonly int _age;
+        private readonly int _heartRate;
         public Animal(string species, int limbs, float height, float weight, int age, int heartRate)
         {
             _species = species;

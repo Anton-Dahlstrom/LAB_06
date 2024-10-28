@@ -8,13 +8,13 @@ namespace LAB_06
 {
     internal class Dog : Animal 
     {
-        private bool Neutered;
+        private bool _neutered;
         public Dog(string species = "dog", int limbs = 4, 
                     float height = 40, float weight = 10, 
                     int age = 5, int heartRate = 80, bool neutered = false)
         : base(species, limbs, height, weight, age, heartRate)
         {
-            Neutered = neutered; 
+            _neutered = neutered; 
         }
         public override void MakeSound()
         {
@@ -22,7 +22,7 @@ namespace LAB_06
         }
         public void Neuter()
         {
-            if (Neutered)
+            if (_neutered)
             {
                 Console.WriteLine("The dog is already neutered");
                 return;
